@@ -16,10 +16,12 @@ body,html{
 /* custom colors */
 :root{
     --primary-color:#da2415;
-    --secondary-color:#fff;
+    --white-color:#fff;
     --black-color:#000;
     --grey-color:#c3c3c3;
-    --light-grey-color:#c3c3c3
+    --light-grey-color:#ebebeb;
+    --off-white-color:#f7f7f7;
+    --text-color:#939393;
 }
 
 /* custom rules */
@@ -27,20 +29,129 @@ h1,h2,h3,h4,h5,h6{
     font-weight: normal;
 }
 
-.btn{
-    background: var(--primary-color);
-    border-radius: 5px;
-    color: var(--secondary-color);
-
-}
-
-.btn:hover {
-    border: 1px solid var(--primary-color);
-    background: var(--secondary-color);
-    border-radius: 5px;}
-
 .container{
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ::::: top nav ::::: */
+#topnav{
+    background: var(--light-grey-color);
+    min-height: 7vh;
+}
+
+#topnav .container {
+    height: 9vh;
+}
+
+#topnav .container .links ul{
     display: flex;
 }
+#topnav .container .links ul li{
+    font-size: .85rem;
+    position: relative;
+}
+
+#topnav .container .links ul li ul{
+    display: none;
+}
+
+#topnav .container .links ul li:hover ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 170%;
+    background: var(--grey-color);
+    text-align: center;
+    color: var(--white-color) ;
+}
+
+#topnav .container .links ul li ul li{
+    font-size: .85rem;
+}
+
+#topnav .container .links ul li a{
+    color: var(--text-color);
+    padding: 0.9rem 1.2rem;
+}
+
+#topnav .container .links ul li a:hover{
+    transition: all .8s ease-in-out;
+    color: var(--black-color);
+    padding: .9rem 2rem;
+}
+
+#topnav .container .links ul li a.active{
+    background: var(--white-color);
+    color: var(--black-color);
+}
+
+#topnav .container .socials{
+}
+
+
+#topnav .container .socials span{
+    background-color: var(--grey-color);
+    padding: .21rem;
+    border-radius: 50%;
+    color: var(--white-color);
+}
+#topnav .container .socials span:hover{
+    background: var(--black-color);
+    cursor: pointer;
+    transition: all .8s ease-in-out;
+}
+#topnav .container .socials span i{
+}
+/* header nav */
+header{
+    background-color: var(--white-color);
+    height: 20vh;
+    border: #da2415 1px solid;
+}
+header .container{
+    height: 20vh;
+    flex-direction: column;
+    border: 2px solid blue;
+    height: ;
+}
+
+header .container .top{
+    display: flex;
+
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+header .container .top .top-right{
+
+    display: flex;
+    gap: 2rem;
+}
+
+header .container .top-right span{
+}
+
+header .container .top-right span a{
+    color: var(--black-color);
+}
+
+header .container .top-right span:hover a{
+    color: #da2415;
+}
+header .container .top-right .span .a .i{}
+
+
+
+/* main nav */
+
+/* footer nav */
+
+
+/* MEDIA QUARY */
