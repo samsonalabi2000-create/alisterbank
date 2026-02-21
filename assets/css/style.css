@@ -111,18 +111,15 @@ h1,h2,h3,h4,h5,h6{
 header{
     background-color: var(--white-color);
     height: 20vh;
-    border: #da2415 1px solid;
+    /* border: #da2415 1px solid; */
 }
 header .container{
     height: 20vh;
     flex-direction: column;
-    border: 2px solid blue;
-    height: ;
 }
 
 header .container .top{
     display: flex;
-
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -130,12 +127,8 @@ header .container .top{
 }
 
 header .container .top .top-right{
-
     display: flex;
-    gap: 2rem;
-}
-
-header .container .top-right span{
+    gap: 1rem;
 }
 
 header .container .top-right span a{
@@ -143,9 +136,61 @@ header .container .top-right span a{
 }
 
 header .container .top-right span:hover a{
-    color: #da2415;
+    color: var(--primary-color);
 }
-header .container .top-right .span .a .i{}
+
+header .container .down{
+    width: 100%;
+    height:10vh
+}
+header .container .down ul{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    gap: 2.5rem;
+}
+header .container .down ul li{
+}
+
+header .container .down ul li a{
+    color: var(--black-color);
+    position: relative;
+    transition: transform 0.1s ease-in-out;
+}
+
+/* header .container .down ul li a.active{
+    color: var(--black-color);
+    position: relative;
+} */
+
+header .container .down ul li a::before,
+header .container .down ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: var(--primary-color );
+    transition: transform 0.5s;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    bottom: -10px;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+header .container .down ul li a:hover::after{
+    transform: scaleX(1);
+}
+/* header .container .down ul li a.active::before,                                                                                                      
+header .container .down ul li a.active::after{
+    content: "";
+    position: absolute;
+    background-color: var(--primary-color );
+    left: 0;
+    width: 100%;
+    height: 1px;
+    bottom: -10px;
+} */
+
 
 
 
